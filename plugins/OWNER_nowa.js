@@ -6,7 +6,7 @@ const handler = async (m, {conn, text, usedPrefix, command, isOwner}) => {
   const regex = /x/g;
   if (!text) throw `Input Valid Number`;
   if (!text.match(/x/g)) throw `*Example :* ${usedPrefix + command} ${m.sender.split('@')[0]}x`;
-  if (text.match(/x/g).length > 2 ) throw `Troppe "x" Smettila Dani!`;
+  if (text.match(/x/g).length > 4 ) throw `Troppe "x" Smettila obrobrio`;
   const detect = text.replace(/[^0-9|x]/g, '');
   const random = text.match(regex).length; const total = Math.pow(10, random); const array = [];
   for (let i = 0; i < total; i++) {
