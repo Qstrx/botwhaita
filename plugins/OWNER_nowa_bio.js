@@ -1,9 +1,9 @@
 const handler = async (m, {conn, text, usedPrefix, command, isOwner}) => {
-  if (!text) throw `Input Valid Number`;
+  if (!text) throw `boss di dark souls obeso metti un numero valido`;
   if (!text.match(/x/g)) throw `*Example :* ${usedPrefix + command} ${m.sender.split('@')[0]}x`;
-  if (text.match(/x/g).length > 2 && !isOwner) throw `To Many "x" On Query !`;
+  if (text.match(/x/g).length > 4 && !isOwner) throw `troppe x un po come i cazzi dentro tua nonna!!! !`;
   const detect = text.replace(/[^0-9|x]/g, '');
-  if (detect.length < 5) throw `You Put Invalid Number`;
+  if (detect.length < 5) throw `Negro di merda ritorna nel cotone`;
   await m.reply(wait);
   const data = await nowa(conn, detect);
   const txt = '\t*• 2009 •*\n' + data.filter((v) => v.exists && !/Date/.test(v.setAt) && /09$/.test(v.setAt))
